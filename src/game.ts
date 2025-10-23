@@ -2,6 +2,14 @@ import Konva from "konva";
 import { Player } from "./player";
 import { InputManager } from "./input";
 
+
+/* Game class: Initialize a "game" by providing: */
+/*   i) containerID (string)                     */
+/*   i) width (int)                              */
+/*   i) height (int)                             */
+
+/* This game class also implements the Game Loop */
+/* which updates the Sprite's position           */
 export class Game {
   private stage: Konva.Stage;
   private layer: Konva.Layer;
@@ -11,7 +19,7 @@ export class Game {
   constructor(containerId: string, width: number, height: number) {
     this.stage = new Konva.Stage({ container: containerId, width, height });
     this.layer = new Konva.Layer();
-    this.player = new Player(100, 100);
+    this.player = new Player(250, 250);
     this.input = new InputManager();
 
     this.layer.add(this.player.getSprite());
