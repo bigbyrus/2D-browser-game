@@ -8,7 +8,8 @@ import { InputManager } from "./input";
 /*   i) width (int)                              */
 /*   i) height (int)                             */
 
-/* This game  */
+/* This game class also implements the Game Loop */
+/* which updates the Sprite's position           */
 export class Game {
   private stage: Konva.Stage;
   private layer: Konva.Layer;
